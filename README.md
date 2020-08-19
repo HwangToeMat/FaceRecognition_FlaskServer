@@ -1,4 +1,4 @@
-# FaceRecognition_FlaskServer
+# FaceRecognition_FlaskServer  <a href="https://hwangtoemat.github.io/ai-project/2020-07-01-%EC%96%BC%EA%B5%B4%EC%9D%B8%EC%8B%9D%EA%B8%B0%EB%B0%98-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EA%B5%90%EC%9C%A1-%ED%94%8C%EB%9E%AB%ED%8F%BC-%EA%B0%9C%EB%B0%9C/">[전체 프로젝트에 대한 상세설명]</a>
 
 얼굴인식 시스템의 파이프라인을 Flask를 통해 서버에서 구현한다.
 
