@@ -9,8 +9,6 @@ from utils.align_trans import *
 from utils.util import *
 import numpy as np
 from flask import Flask, request
-from flask_restful import Resource, Api
-from flask_script import Manager, Server
 from PIL import Image, ImageDraw, ImageFont
 from torchvision import transforms as trans
 import torch
@@ -212,6 +210,11 @@ def modelin():
     if request.method == 'GET':
         URL_in = request.args.get('ip', '')
         landmark = request.args.get('landmark', '')
+        try:
+            landmark = list(
+                map(float, landmark.rstrip(']').lstrip('[').split(',')))
+        except:
+            pass
         student_id = get_info(URL_in, landmark, device_0, target, name)
         return {'id': student_id}
 
