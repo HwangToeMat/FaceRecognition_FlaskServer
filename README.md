@@ -2,6 +2,10 @@
 
 얼굴인식 시스템의 파이프라인을 Flask를 통해 서버에서 구현한다.
 
+## Demo
+
+<img src="https://github.com/HwangToeMat/HwangToeMat.github.io/blob/master/AI-Project/image/KHUFACE/3/video.gif?raw=true" style="max-width:100%;margin-left: auto; margin-right: auto; display: block;">
+
 ## Usage
 
 ```
