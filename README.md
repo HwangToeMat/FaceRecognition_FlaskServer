@@ -65,6 +65,13 @@ def get_face(URL, device, targets=target, names=name):
         return student_list
     except:
         return []
+        
+@app.route('/modelfr', methods=['GET'])
+def modelfr():
+    if request.method == 'GET':
+        URL_fr = request.args.get('ip', '')
+        student_list = get_face(URL_fr, device_0, target, name)
+        return {'box': student_list}
 ```
 
 - input
@@ -126,6 +133,19 @@ def get_id(URL, device, targets=target, names=name):
         return student_list
     except:
         return []
+
+@app.route('/modelin', methods=['GET'])
+def modelin():
+    if request.method == 'GET':
+        URL_in = request.args.get('ip', '')
+        landmark = request.args.get('landmark', '')
+        try:
+            landmark = list(
+                map(float, landmark.rstrip(']').lstrip('[').split(',')))
+        except:
+            pass
+        student_id = get_info(URL_in, landmark, device_0, target, name)
+        return {'id': student_id}
 ```
 
 - input
@@ -187,6 +207,13 @@ def get_id(URL, device, targets=target, names=name):
         return student_list
     except:
         return []
+
+@app.route('/modelat', methods=['GET'])
+def modelat():
+    if request.method == 'GET':
+        URL_at = request.args.get('ip', '')
+        student_list = get_id(URL_at, device_0, target, name)
+        return {'id': student_list}
 ```
 
 - input
